@@ -1,0 +1,4 @@
+#!/bin/bash
+
+betterlockscreen -u $1 
+betterlockscreen -w $1

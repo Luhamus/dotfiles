@@ -1,0 +1,28 @@
+syntax on
+"Color scheme - first line for background fix
+let g:dracula_colorterm = 0
+packadd! dracula
+syntax enable
+colorscheme dracula
+	
+" Just some nice stuff
+set number relativenumber
+set smartindent
+set nowrap "Line goes off the screen
+set noswapfile
+set cursorline "highlight line where the cursor is currently
+
+"tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab "convert from tab to spaces
+
+"Search highlight
+set hlsearch
+set incsearch "from first letter
+
+"Splits
+set splitbelow
+
+"Bell No Please Stop 
+set belloff=all

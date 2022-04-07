@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while read file
+do
+  case "$1" in
+    "w") setbg $file ;;
+    "r") mv $file /home/rasmus/.trash/;;  #TODO hardcoded
+  esac
+done
