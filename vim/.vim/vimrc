@@ -1,3 +1,4 @@
+"Must get Dracula theme if not cloned yet
 syntax on
 "Color scheme - first line for background fix
 let g:dracula_colorterm = 0

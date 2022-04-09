@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/rasmus/.config/neofetch'
-let g:netrw_dirhist_5='/home/rasmus/.config/polybar'
-let g:netrw_dirhist_4='/home/rasmus/.config/bspwm'
-let g:netrw_dirhist_3='/home/rasmus/.config/polybar'
-let g:netrw_dirhist_2='/etc/modules-load.d'
-let g:netrw_dirhist_1='/home/rasmus/.config/polybar'
