@@ -1,5 +1,7 @@
 --Generaalne
 
+vim.cmd("colorscheme nordfox")
+
 --Tabs
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

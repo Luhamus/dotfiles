@@ -5,7 +5,13 @@ vim.g.mapleader = ' '
 
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 
--- BarBar mappings here --
+---- My Mappings ----
+
+map('n', 'G', 'gg', opts)
+map('n', 'gg', 'G', opts)
+map('n', 'Y', 'y$', opts)
+
+---- BarBar mappings here ----
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
