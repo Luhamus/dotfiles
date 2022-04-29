@@ -1,0 +1,7 @@
+#! /bin/bash
+
+SRC_FILE=~/.local/scripts/data/bigBoiQuotes.dat
+RIDA=$(shuf -i 1-$[$(cat $SRC_FILE | wc -l)/4] | head -n1 )
+QUOTE=$(sed -n $[2*${RIDA}+1]p $SRC_FILE)
+QUOTIST=$(sed -n $[2*${RIDA}+2]p $SRC_FILE)
+echo $QUOTE $QUOTIST

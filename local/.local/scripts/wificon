@@ -1,5 +1,6 @@
 #! /bin/bash
+#Something not work atm, why u do dis?
 
-bassid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select Wifi: " -l 20 | cut -d' ' -f1)
+bassid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select Wifi: " -l 10 | cut -d' ' -f1)
 pass=$(echo "" | dmenu -p "Enter Password: ")
 nmcli device wifi connect $bssid password $pass

@@ -1,4 +1,6 @@
 #!/bin/bash
+#Used in SXIV, not in xinitrc, because it takes couple of secs to cache and stuff
+#TODO võiksid otse sxiv-se panna
 
 betterlockscreen -u $1 
 betterlockscreen -w $1

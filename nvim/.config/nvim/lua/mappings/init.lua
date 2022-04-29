@@ -7,9 +7,18 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 
 ---- My Mappings ----
 
+---- first things first ---
 map('n', 'G', 'gg', opts)
 map('n', 'gg', 'G', opts)
+
+----Yänki usjuallylilt----
 map('n', 'Y', 'y$', opts)
+
+----Kiirus Kiirus----
+map('n', 'K', '10j', opts)
+map('n', 'L', '10k$', opts)
+
+
 
 ---- BarBar mappings here ----
 local map = vim.api.nvim_set_keymap
