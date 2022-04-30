@@ -8,6 +8,7 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 ---- My Mappings ----
 
 ---- first things first ---
+map('i', 'jj', '<Esc>', opts)
 map('n', 'G', 'gg', opts)
 map('n', 'gg', 'G', opts)
 
