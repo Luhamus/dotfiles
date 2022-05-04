@@ -1,6 +1,6 @@
 # ~/.bashrc
+#
 
-#Set the Bash shotcuts to vim's
 #set -o vi
 
 # If not running interactively, don't do anything
@@ -12,17 +12,21 @@ export PATH="$PATH:/home/rasmus/.local/scripts"
 
 export EDITOR="nvim"
 
-# Alias
+# Aliases
 alias c="clear"
 alias sxiv="sxiv -tbf"
-alias iv="sxiv -tbf ~/Wallpapers"
+alias iv="sxiv -tbf ~/pix"
 alias sleep="systemctl suspend"
+alias mute="amixer -q set Master off"
+alias vol="amixer -q set Speaker 80%; amixer -q set Headphone 80%; amixer -q set Master 80%"
 alias grep="grep -i --color"
 alias vim="nvim"
+alias mpv="mpv --fs"
 
-#Thinpadile ainult
-alias mute="amixer -q set Master off"
-alias vol="amixer -q set Speaker on; amixer -q set Headphone on; amixer -q set Master on"
+# Disable files
 
-#youtube-dl
-alias muss="youtube-dl -x --format-audio mp3"
+export LESSHISTFILE=-
+
+# While opeing bash
+
+quotes

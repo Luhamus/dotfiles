@@ -3,7 +3,7 @@
 while read file
 do
   case "$1" in
-    "w") setbg $file ;;
-    "r") mv $file /home/rasmus/.trash/;;  #TODO hardcoded
+    "w") xwallpaper --zoom $file; cp $file ~/.local/scripts/data/wp.png ;;
+    "r") mv $file /home/rasmus/.trash/;; 
   esac
 done

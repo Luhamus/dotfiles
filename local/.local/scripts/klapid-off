@@ -1,4 +1,0 @@
-#! /bin/bash
-
-bluetoothctl power on
-bluetoothctl disconnect 04:52:C7:C7:B4:04

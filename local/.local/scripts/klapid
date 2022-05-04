@@ -1,7 +1,5 @@
 #! /bin/bash
 
-KLAPI_MAC=04:52:C7:C7:B4:04
-
 bluetoothctl power on
 bluetoothctl discoverable on
-bluetoothctl connect $KLAPI_MAC
+bluetoothctl connect 04:52:C7:C7:B4:04

@@ -8,36 +8,24 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
-
-
-
-
-
-
-
     xrdb -merge $sysresources
-
 fi
+
 
 if [ -f $sysmodmap ]; then
     xmodmap $sysmodmap
 fi
 
+
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
     xrdb -merge "$userresources"
-
 fi
+
 
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
+
 
 # start some nice programs
 
@@ -48,12 +36,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+#Brrrrrrrrrrrrrrrr
+
 setxkbmap ee 
 setxkbmap -option caps:ctrl_modifier
-wmname compiz &
-$HOME/.local/scripts/display.sh
-~/.local/scripts/fehbg &
-#nitrogen --restore &
-xsetroot -cursor_name left_ptr
-picom -f &
+$HOME/.local/scripts/display.sh  # unfunk the screen sizing
+xwallpaper --zoom ~/.local/scripts/data/wp.png  # wallpaber
+
+xsetroot -cursor_name left_ptr  # To not have big X as cursor
+unclutter &  # Hide cursor if idle
+
+wmname compiz  # for stupid IDEA
+picom -f &  # Honestly not sure what exactly it does
+
 exec bspwm
