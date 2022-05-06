@@ -1,69 +1,12 @@
-#rxtv terminal emulator config in case i want to go back
-
-URxvt.font: 		xft:terminus:bold:size=16
-URxvt.foreground: 	#A8A19F
-URxvt.scrollBar: 	false
-URxvt.internalBorder: 	15
-URxvt.letterSpace: 	0
-
-!Transparency and fade
-urxvt*depth: 		32		
-urxvt*background:	rgba:0000/0000/0200/c999
-URxvt*fading:		30
-
-!! Extentions
-URxvt.perl.ext-common: deafault,matcher,resize-font
-Urxvt.colorUL:      #4682B4
-
-!Font size
-URxvt.keysym.C-down: resize-font:smaller
-URxvt.keysym.C-up: resize-font:bigger
-
-!Urls!Matcher
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button:   1
-
-!! Color scheme - Monokai.dark
-! black
-*.color0:       #272822
-*.color8:       #75715e
-
-! red
-*.color1:       #f92672
-*.color9:       #f92672
-
-! green
-*.color2:       #a6e22e
-*.color10:      #a6e22e
-
-! yellow
-*.color3:       #f4bf75
-*.color11:      #f4bf75
-
-! blue
-*.color4:       #66d9ef
-*.color12:      #66d9ef
-
-! magenta
-*.color5:       #ae81ff
-*.color13:      #ae81ff
-
-! cyan
-*.color6:       #a1efe4
-*.color14:      #a1efe4
-
-! white
-*.color7:       #f8f8f2
-*.color15:      #f9f8f5
-
-!Blinker color
-!URxvt:cursorColor: magneta
-
-
-
-!SXIV STUFFY
+!! sxiv
 Sxiv.background: #000
 Sxiv.foreground: #00C0FF
 
-Sxiv.font: terminus
 
+!! st
+
+!!Transparency
+*.alpha: .8
+
+!! Font
+*.font: Hack Nerd Font Mono:size=16

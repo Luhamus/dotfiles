@@ -1,9 +1,11 @@
 #!/bin/bash
 
+CUR_WP_LOC=~/.local/scripts/data/wp.jpg
+
 while read file
 do
   case "$1" in
-    "w") xwallpaper --zoom $file; cp $file ~/.local/scripts/data/wp.png ;;
+    "w") setbg $file; cp $file $CUR_WP_LOC ;;
     "r") mv $file /home/rasmus/.trash/;; 
   esac
 done

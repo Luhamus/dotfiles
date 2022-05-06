@@ -6,13 +6,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 export PS1="\W "
 export PATH="$PATH:/home/rasmus/.local/scripts"
 
 export EDITOR="nvim"
 
 # Aliases
+alias ls='ls --color=auto'
 alias c="clear"
 alias sxiv="sxiv -tbf"
 alias iv="sxiv -tbf ~/pix"
@@ -24,9 +24,7 @@ alias vim="nvim"
 alias mpv="mpv --fs"
 
 # Disable files
-
 export LESSHISTFILE=-
 
 # While opeing bash
-
 quotes

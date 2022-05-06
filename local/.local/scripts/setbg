@@ -1,0 +1,7 @@
+#! /bin/bash
+
+xwallpaper --zoom $1
+wal -c
+wal -i $1 >/dev/null
+sed -i '/SchemeUrg/d' /home/rasmus/.cache/wal/colors-wal-dwm.h
+(cd $HOME/.config/suckless/dwm && sudo make clean install >/dev/null)

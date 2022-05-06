@@ -1,0 +1,8 @@
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#Lockscreen
+super + x
+    i3lock -i /home/rasmus/.local/scripts/data/lock.png
+
