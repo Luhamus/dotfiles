@@ -9,12 +9,6 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 if [ -f $sysresources ]; then
 
-
-
-
-
-
-
     xrdb -merge $sysresources
 
 fi
@@ -24,12 +18,6 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
 
     xrdb -merge "$userresources"
 
@@ -49,14 +37,14 @@ done &
 
 # keyboard
 setxkbmap ee &
-setxkbmap -option caps:ctrl_modifier &
+setxkbmap -option caps:ctrl_modifier
 
 # hiir
 unclutter &
 xsetroot -cursor_name left_ptr &
 
 # Environment
-xwallpaper --zoom ~/.local/scripts/data/wp.png
+setbg /home/rasmus/.local/scripts/data/wp.jpg
 sxhkd &
 xcompmgr &
 while type dwm >/dev/null; do dwm && continue || break; done

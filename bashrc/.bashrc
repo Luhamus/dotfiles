@@ -9,19 +9,18 @@
 export PS1="\W "
 export PATH="$PATH:/home/rasmus/.local/scripts"
 
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # Aliases
 alias ls='ls --color=auto'
 alias c="clear"
-alias sxiv="sxiv -tbf"
-alias iv="sxiv -tbf ~/pix"
+alias sxiv="sxiv -tb"
+alias iv="sxiv -tb ~/pix"
 alias sleep="systemctl suspend"
 alias mute="amixer -q set Master off"
 alias vol="amixer -q set Speaker 80%; amixer -q set Headphone 80%; amixer -q set Master 80%"
 alias grep="grep -i --color"
-alias vim="nvim"
-alias mpv="mpv --fs"
+#alias vim="nvim"
 
 # Disable files
 export LESSHISTFILE=-
