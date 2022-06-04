@@ -1,0 +1,93 @@
+syntax on
+set encoding=UTF-8
+	
+let mapleader = " "
+
+" Just some nice stuff
+set relativenumber          "Me likey
+set smartindent             "Tõmbab joonele - näiteks commentitd siinsamas
+set nowrap                  "Line goes off the screen
+set noswapfile              "dont need those
+set belloff=all             "Stupid BELL
+set clipboard=unnamedplus   "copy pase out of Vim
+
+au BufEnter * set fo-=cro   "Peab nii, muidu plugin runnib üle
+"set cursorline             "highlight line where the cursor is currently
+
+
+"Cursor placement
+set sidescrolloff=999
+set scrolloff=999
+
+"tabs vs spaces ?
+set tabstop=4               "Tabs to 4 spaces
+set shiftwidth=4            
+set expandtab               "convert from tab to spaces
+
+"Splits
+set splitbelow splitright
+
+"Search
+set hlsearch
+set incsearch               "from first letter
+set ignorecase
+set smartcase               "Capital letter serach looks for that, you know
+
+"YML files - very nice
+autocmd Filetype yaml set cursorcolumn
+autocmd Filetype yml set cursorcolumn
+
+
+
+"Binds
+
+nnoremap <leader>nh :noh<CR>
+"disable search highlight
+nnoremap <leader>t :term<CR>
+"terminal
+
+"Nerdtree
+nnoremap <leader>e :NERDTreeToggle<CR>
+
+
+
+"""Plugins"""
+
+"Get vim-plug incase isn't installed
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+
+call plug#begin()
+
+Plug 'flazz/vim-colorschemes'   "Yes
+Plug 'preservim/nerdtree'       "Tree
+Plug 'ryanoasis/vim-devicons'   "Tree icons
+Plug 'itchyny/lightline.vim'    "Line
+
+call plug#end()
+
+
+
+colorscheme wombat
+"wombat             - blueish niceish
+"terra/nord/nighfox - also ok
+
+set laststatus=2    "To see Line
+set noshowmode      "Disable double insert
+let g:lightline = {'colorscheme': 'wombat',}
+
+
+"Remapperinjo
+inoremap jj <Esc>
+
+nnoremap gg G
+nnoremap G gg
+nnoremap K 10j
+nnoremap L 10k
+
+set viminfo=%,<800,'10,/50,:100,h,f0,n~/.vim/cache/.viminfo "stupid file in home dir
