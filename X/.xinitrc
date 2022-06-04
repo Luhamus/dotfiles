@@ -37,7 +37,7 @@ done &
 
 # keyboard
 setxkbmap ee &
-setxkbmap -option caps:ctrl_modifier
+setxkbmap -option ; setxkbmap -option caps:ctrl_modifier
 
 # hiir
 unclutter &

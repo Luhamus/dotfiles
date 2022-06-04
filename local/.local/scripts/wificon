@@ -1,5 +1,5 @@
 #! /bin/bash
 
-bassid=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select Wifi: " -l 20 | cut -d' ' -f1)
+wifinimi=$(nmcli device wifi list | sed -n '1!p' | cut -b 9- | dmenu -p "Select Wifi: " -l 20 | cut -d' ' -f1)
 pass=$(echo "" | dmenu -p "Enter Password: ")
-nmcli device wifi connect $bssid password $pass
+nmcli device wifi connect $wifinimi password $pass
