@@ -1,0 +1,2 @@
+## dots for stuff
+* nvim
